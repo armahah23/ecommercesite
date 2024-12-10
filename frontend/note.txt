@@ -1,0 +1,9 @@
+<NavLink
+              to={"logout"}
+              className={"btn_secondary_rounded flexCenter gap-x-2 medium-16"}
+            >
+              <img src={logout} alt="logoutIcon" height={19} width={19} />
+              Logout
+            </NavLink>
+
+            home start 1.05

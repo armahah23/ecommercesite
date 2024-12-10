@@ -1,11 +1,52 @@
+import { NavLink } from "react-router-dom";
+import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md";
+import PropTypes from "prop-types";
 
-
-const Navbar = () => {
+const Navbar = ({ containerStyles }) => {
   return (
-    <div>
-      Navbar
-    </div>
-  )
-}
+    <nav className={`${containerStyles}`}>
+      <NavLink
+        to={"/"}
+        className={({ isActive }) => (isActive ? "active_link" : "")}
+      >
+        <div className="flexCenter gap-x-1">
+          <MdHomeFilled />
+          Home
+        </div>
+      </NavLink>
+      <NavLink
+        to={"/mens"}
+        className={({ isActive }) => (isActive ? "active_link" : "")}
+      >
+        <div className="flexCenter gap-x-1">
+          <MdCategory />
+          Men's
+        </div>
+      </NavLink>
+      <NavLink
+        to={"/womens"}
+        className={({ isActive }) => (isActive ? "active_link" : "")}
+      >
+        <div className="flexCenter gap-x-1">
+          <MdShop2 />
+          Women's
+        </div>
+      </NavLink>
+      <NavLink
+        to={"/kids"}
+        className={({ isActive }) => (isActive ? "active_link" : "")}
+      >
+        <div className="flexCenter gap-x-1">
+          <MdContacts />
+          Kid's
+        </div>
+      </NavLink>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
+
+Navbar.propTypes = {
+  containerStyles: PropTypes.string.isRequired,
+};
