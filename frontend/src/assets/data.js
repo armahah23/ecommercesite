@@ -111,7 +111,7 @@ export const LATEST = [
 ];
 
 // FOOTER SECTION
-export const FOOTER_LINKS = [
+const FOOTER_LINKS = [
   {
     title: "Learn More",
     links: [
@@ -132,6 +132,8 @@ export const FOOTER_LINKS = [
     ],
   },
 ];
+
+export default FOOTER_LINKS;
 
 export const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
