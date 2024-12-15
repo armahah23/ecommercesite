@@ -6,4 +6,4 @@
               Logout
             </NavLink>
 
-            home start 1.05
+            home start 1.30

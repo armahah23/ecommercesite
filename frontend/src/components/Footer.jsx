@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
-import FOOTER_LINKS from "../assets/data.js";
-import PropTypes from 'prop-types';
+import getDefaultData from "../assets/data.js";
+import PropTypes from "prop-types";
+
+const { footerLinks, footerContactInfo, socials } = getDefaultData();
 
 function Footer() {
   return (
-    <Footer>
-      <div>
-        <div>
+    <footer className="flexCenter pb-24 pt-20">
+      <div className="max_padd_container flex flex-col w-full gap-14">
+        <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link to="/" className="mb-10 bold-20">
             Shoppee
           </Link>
-          <div>
-            {FOOTER_LINKS.map((col) => (
+          <div className="flex flex-wrap gap-8 sm:justify-between md:flex-1">
+            {footerLinks.map((col) => (
               <FooterColumn title={col.title} key={col.title}>
-                <ul>
+                <ul className="flex flex-col gap-4 regular-14 text-gray-20">
                   {col.links.map((link) => (
                     <Link to="/" key={link}>
                       {link}
@@ -22,23 +24,46 @@ function Footer() {
                 </ul>
               </FooterColumn>
             ))}
+            <div className="flex flex-col gap-5">
+              <FooterColumn title={footerContactInfo.title}>
+                {footerContactInfo.links.map((link) => (
+                  <Link to="/" key={link.label} className="flex gap-4 md:flex-col lg:flex-row">
+                    <p>{link.label}: </p>
+                    <p className="medium-14">{link.value}</p>
+                  </Link>
+                ))}
+              </FooterColumn>
+            </div>
+            <div className="flex">
+              <FooterColumn>
+              <ul className="flex gap-4">
+                {socials.links.map((link) => (
+                  <Link to="/" key={link}>
+                    <img src={link} alt="socialIcon" height={22} width={22} />
+                  </Link>
+                ))}
+              </ul>
+              </FooterColumn>
+            </div>
           </div>
         </div>
+        <div className="border bg-gray-20"></div>
+        <p className="text-center regular-14 text-gray-20">
+          2024 Shoppee | All rights reserved{" "}
+        </p>
       </div>
-    </Footer>
+    </footer>
   );
 }
-
-
 
 const FooterColumn = ({ title, children }) => {
   return (
-    <div>
-      <h4>{title}</h4>
+    <div className="flex flex-col gap-4">
+      <h4 className="bold-18 whitespace-nowrap">{title}</h4>
       {children}
     </div>
   );
-}
+};
 
 export default Footer;
 
@@ -46,5 +71,3 @@ FooterColumn.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
-
-

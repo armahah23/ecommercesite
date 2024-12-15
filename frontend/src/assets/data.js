@@ -22,7 +22,8 @@ import youtube from './youtube.svg'
 import linkedin from './linkedin.svg'
 
 
-export const POPULAR = [
+
+const POPULAR = [
   {
     id:1,
     name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
@@ -50,8 +51,9 @@ export const POPULAR = [
   },
 ];
 
+export { POPULAR };
 
-export const LATEST = [
+const LATEST = [
   {
     id: 5,
     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
@@ -110,6 +112,8 @@ export const LATEST = [
   },
 ];
 
+export { LATEST };
+
 // FOOTER SECTION
 const FOOTER_LINKS = [
   {
@@ -133,9 +137,9 @@ const FOOTER_LINKS = [
   },
 ];
 
-export default FOOTER_LINKS;
+export { FOOTER_LINKS };
 
-export const FOOTER_CONTACT_INFO = {
+const FOOTER_CONTACT_INFO = {
   title: "Contact Us",
   links: [
     { label: "Contact Number", value: "123-456-7890" },
@@ -143,7 +147,9 @@ export const FOOTER_CONTACT_INFO = {
   ],
 };
 
-export const SOCIALS = {
+export { FOOTER_CONTACT_INFO };
+
+const SOCIALS = {
   title: "Social",
   links: [
     facebook,
@@ -154,3 +160,18 @@ export const SOCIALS = {
   ],
 };
 
+export { SOCIALS };
+
+// Define a default function
+function getDefaultData() {
+  return {
+    popular: POPULAR,
+    latest: LATEST,
+    footerLinks: FOOTER_LINKS,
+    footerContactInfo: FOOTER_CONTACT_INFO,
+    socials: SOCIALS
+  };
+}
+
+// Export the function as default
+export default getDefaultData;

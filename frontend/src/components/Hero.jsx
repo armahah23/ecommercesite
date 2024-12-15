@@ -4,7 +4,7 @@ import { MdLocalOffer } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <section className="bg-hero bg-center bg-no-repeat h-screen w-full">
+    <section className="bg-hero bg-center bg-cover bg-no-repeat h-screen w-full">
       <div className="max_padd_container relative top-32 xs:top-30">
         <h1 className="h1 capitalize max-w-[37rem]">Digital Shoping Junction</h1>
         <p className="text-gray-50 regular-16 mt-6 max-w-[37rem]">
