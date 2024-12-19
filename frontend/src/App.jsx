@@ -7,6 +7,10 @@ import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Footer from "./components/Footer";
 // import Navbar from "./components/Navbar";
+//images
+import bannermen from "./assets/bannermens.png";
+import bannerwomen from "./assets/bannerwomens.png";
+import bannerkid from "./assets/bannerkids.png";
 
 function App() {
   return (
@@ -16,9 +20,9 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/mens" element={<Category />} />
-            <Route path="/womens" element={<Category />} />
-            <Route path="/kids" element={<Category />} />
+            <Route path="/mens" element={<Category category="men" banner={bannermen}/>} />
+            <Route path="/womens" element={<Category category="women" banner={bannerwomen}/>} />
+            <Route path="/kids" element={<Category category="kid" banner={bannerkid}/>} />
             <Route path="/product" element={<Product />} >
               <Route path=":ProductId" element={<Product />} />
             </Route>

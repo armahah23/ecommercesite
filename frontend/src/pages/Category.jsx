@@ -1,6 +1,6 @@
 
 
-function Category() {
+function Category({category, banner}) {
   return (
     <div>
       Category
