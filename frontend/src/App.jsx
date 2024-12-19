@@ -15,7 +15,7 @@ import bannerkid from "./assets/bannerkids.png";
 function App() {
   return (
     <>
-      <main className="bg-primar text-tertiary">
+      <main className="bg-primary text-tertiary">
         <BrowserRouter>
         <Header />
           <Routes>
