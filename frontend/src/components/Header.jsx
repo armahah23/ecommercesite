@@ -54,7 +54,7 @@ function Header() {
             </NavLink>
             
             <NavLink
-              to={"logout"}
+              to={"login"}
               className={"btn_secondary_rounded flexCenter gap-x-2 medium-16"}
             >
               <img src={user} alt="userIcon" height={19} width={19} />
