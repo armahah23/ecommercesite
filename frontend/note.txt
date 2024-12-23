@@ -7,3 +7,5 @@
             </NavLink>
 
             home start 2.24
+
+          to={`product/${id}`}

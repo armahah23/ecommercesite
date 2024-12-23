@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import PropTypes from "prop-types";
-import all_products from "../data/products.json";
+import all_products from "../assets/all_products.js";
 
 
 export const ShopContext = createContext(null);
