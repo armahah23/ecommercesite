@@ -5,7 +5,7 @@ import { MdClose, MdMenu } from "react-icons/md";
 import { FaOpencart } from "react-icons/fa";
 
 //imported images
-import logo from "../../public/logo.png";
+import logo from "../assets/logo.png";
 // import logout from "../assets/logout.svg";
 import user from "../assets/user.svg";
 

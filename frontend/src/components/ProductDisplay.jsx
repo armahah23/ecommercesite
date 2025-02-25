@@ -3,9 +3,12 @@ import product_rt_2 from "../assets/product_rt_2.png";
 import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
 import { MdStar } from "react-icons/md";
+import { ShopContext } from "../context/ShopContext";
+import { useContext } from "react";
 
 function ProductDisplay(props) {
   const { product } = props;
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <section>
@@ -53,7 +56,9 @@ function ProductDisplay(props) {
               </div>
             </div>
             <div className="flex flex-col gap-y-3 mb-4 max-w-[300px]">
-              <button className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">
+              <button
+              onClick={() => {addToCart(product.id)}}
+               className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">
                 Add to cart
               </button>
               <button className="btn_dark_rounded !rounded-none uppercase regular-14 tracking-widest">
