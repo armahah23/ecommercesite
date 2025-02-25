@@ -10,7 +10,7 @@ function Footer() {
       <div className="max_padd_container flex flex-col w-full gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link to="/" className="mb-10 bold-20">
-            Shoppee
+            Nidha
           </Link>
           <div className="flex flex-wrap gap-8 sm:justify-between md:flex-1">
             {footerLinks.map((col) => (
@@ -49,7 +49,7 @@ function Footer() {
         </div>
         <div className="border bg-gray-20"></div>
         <p className="text-center regular-14 text-gray-20">
-          2024 Shoppee | All rights reserved{" "}
+          2025 Nidha | All rights reserved{" "}
         </p>
       </div>
     </footer>

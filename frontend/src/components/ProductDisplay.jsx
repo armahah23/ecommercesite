@@ -11,7 +11,7 @@ function ProductDisplay(props) {
     <section>
       <div className="flex flex-col gap-14 xl:flex-row">
         {/* left side  */}
-        <div className="flex gap-5">
+        <div className="flex gap-x-2 xl:flex-1">
           <div className="flex flex-col gap-[7px] flex-wrap">
             <img src={product_rt_1} alt="productImg" className="max-h-[99px]" />
             <img src={product_rt_2} alt="productImg" className="max-h-[99px]" />
@@ -23,20 +23,18 @@ function ProductDisplay(props) {
           </div>
         </div>
         {/* right side */}
-        <div>
-          <div className="flex flex-col">
-            <h3 className="h3">{product.name}</h3>
-            <div className="flex gap-2 text-secondary medium-22">
-              <MdStar />
-              <MdStar />
-              <MdStar />
-              <MdStar />
-              <p>(111)</p>
-            </div>
-            <div className="flex gap-x-6 medium-20 my-4">
-              <div className="line-through">{product.new_price}</div>
-              <div className="text-secondary">{product.old_price}</div>
-            </div>
+        <div className="flex-col flex xl:flex-[1.7]">
+          <h3 className="h3">{product.name}</h3>
+          <div className="flex gap-x-2 text-secondary medium-22">
+            <MdStar />
+            <MdStar />
+            <MdStar />
+            <MdStar />
+            <p>(111)</p>
+          </div>
+          <div className="flex gap-x-6 medium-20 my-4">
+            <div className="line-through">{product.new_price}</div>
+            <div className="text-secondary">{product.old_price}</div>
           </div>
           <div className="mb-4">
             <h4 className="bold-16">Select Size:</h4>
